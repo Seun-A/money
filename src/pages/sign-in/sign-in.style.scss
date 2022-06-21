@@ -1,0 +1,20 @@
+.sign-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100vh;
+    padding: 45px 35px 60px;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .btn {
+        align-self: center;
+    }
+}

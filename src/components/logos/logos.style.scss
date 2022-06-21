@@ -1,0 +1,50 @@
+/* LAUNCH LOGO */
+.launch-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: white;
+    z-index: 10;
+
+    .launch-logo-text {
+        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: 4px;
+        background-image: linear-gradient(to bottom right, #C432F8, #42A2E7);
+        background-clip: text;
+        color: transparent;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .color-logo {
+        width: 64px;
+        height: 58px;
+        margin: 30px;
+        image-rendering: pixelated;
+    }    
+}
+
+/* WELCOME LOGO */
+.welcome-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    width: 110px;
+    z-index: 10;
+
+    .welcome-logo-text {
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .welcome-logo {
+        width: 60px;
+        image-rendering: pixelated;
+    }    
+}

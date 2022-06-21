@@ -1,0 +1,88 @@
+/* INNER CIRCLES */
+.circle-1{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(134.4deg, #5264F9 -53.64%, #3AF9EF 55.89%);
+    z-index: 3;
+    border-radius: 50%;
+}
+.circle-2{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(307.83deg, rgba(198, 48, 248, 0) -113.81%, rgba(123, 67, 248, 0.5) 106.56%, #2F56F8 170.15%);
+    z-index: 2;
+    border-radius: 50%;
+}
+.circle-3{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(121.81deg, #FF01C7 -53.65%, rgba(199, 47, 248, 0) 275.21%, rgba(105, 25, 131, 0) 275.21%);
+    z-index: 1;
+    border-radius: 50%;
+}
+
+
+
+/* BIG CIRCLES */
+.big-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    z-index: -1;
+
+    >* {
+        position: absolute;
+    }
+
+
+    .circle-1{
+        top: -350px;
+        left: -510px;
+        width: 805px;
+        height: 777px;
+    }
+    .circle-2{
+        top: -394px;
+        left: -440px;
+        width: 830px;
+        height: 870px;
+    }
+    .circle-3{
+        top: -499px;
+        left: -366px;
+        width: 827px;
+        height: 870px;
+    }
+}
+
+
+/* SMALL CIRCLES */
+.small-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    >* {
+        position: absolute;
+    }
+
+    .circle-1{
+        top: -145px;
+        left: -50px;
+        width: 360px;
+        height: 378px;
+    }
+    .circle-2{
+        top: -125px;
+        left: -5px;
+        width: 360px;
+        height: 378px;
+    }
+    .circle-3{
+        top: -165px;
+        left: 40px;
+        width: 360px;
+        height: 378px;
+    }
+}
