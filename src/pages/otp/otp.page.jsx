@@ -35,7 +35,7 @@ const OtpPage = ({ variation }) => (
       ) 
       : variation === 'otp-pin' ? (
         <>
-          <div className='otp-info m-3 text-center'>Enter the OTP end to <strong>+234 808 240 4024</strong></div>
+          <div className='otp-info m-3 text-center'>Enter the OTP end to <strong>+234 800 000 0000</strong></div>
 
           <input className='otp-pin mt-4' type="tel" maxLength="4" placeholder={1234} />
           <div className='resend mt-4'><strong>
