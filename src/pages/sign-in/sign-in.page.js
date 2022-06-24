@@ -20,8 +20,9 @@ const SignInPage = () => (
             <ForgotMessage />
         </div>
 
-        <Button type='signin' />
-
+            <Link to='/otp-num' className="d-flex justify-content-center">
+                <Button type='signin' />
+            </Link>
     </div>
 )
 

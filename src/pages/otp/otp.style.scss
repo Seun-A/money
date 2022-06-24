@@ -1,0 +1,54 @@
+.otp-page {
+  height: 100vh;
+
+  .otp-img {
+    height: 35vh;
+    margin: 7vh 0 7.5vh 0;
+  }
+
+  .otp-info { width: 90vw; }
+  .otp-instruction { color: #B9B9B9; }
+  .otp-number-input { 
+    border-bottom: 1px solid black; 
+    // width: 68vw;
+    box-sizing: border-box;
+    // text-align: center !important;
+    padding: 1vh 4vw;
+    .code {
+      margin-right: 0.5rem;
+    }
+    input {
+      border: none;
+      width: 7.5rem;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 7vh;
+    
+    .main {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.otp-pin-container {
+  width: 10rem;
+  
+}
+.otp-pin {
+  
+  width: 8rem;
+  border: none;
+  border-bottom: solid 0.1rem black;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.6rem;
+  transition: border 0.5s;
+  
+  &:focus {
+    border-bottom: solid 0.1rem #2743FD;
+  }
+}

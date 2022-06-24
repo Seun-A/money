@@ -17,7 +17,9 @@ const SignUpPage = () => (
             <Input type='email' status='error' />
         </div>
 
-        <Button type='signup' />
+        <Link to='/otp-num' className="d-flex justify-content-center">
+            <Button type='signup' />
+        </Link>
     </div>
 )
 
