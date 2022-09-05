@@ -1,0 +1,15 @@
+.welcome-back {
+  height: 160px;
+  width: 110px;
+  z-index: 10;
+
+  .welcome-logo { width: 60px; }
+
+  .welcome-logo-text {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+}

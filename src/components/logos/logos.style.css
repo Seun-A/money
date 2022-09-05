@@ -1,0 +1,4 @@
+.color-logo, .welcome-logo {
+  aspect-ratio: 1 !important;
+  image-rendering: pixelated;
+}    

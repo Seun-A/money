@@ -1,20 +1,19 @@
 import './circles.style.scss'
 
 const BigCircles = () => (
-    <div className='big-circles'>
-        Bigweewewewdnwde
-        <div className='circle-1'></div>
-        <div className='circle-2'></div>
-        <div className='circle-3'></div>
-    </div>
+  <div className='circles-container big-circles'>
+    <div className='circle circle-1'></div>
+    <div className='circle circle-2'></div>
+    <div className='circle circle-3'></div>
+  </div>
 )
 
 const SmallCircles = () => (
-    <div className='small-circles'>
-        <div className='circle-1'></div>
-        <div className='circle-2'></div>
-        <div className='circle-3'></div>
-    </div>
+  <div className='circles-container small-circles'>
+    <div className='circle circle-1'></div>
+    <div className='circle circle-2'></div>
+    <div className='circle circle-3'></div>
+  </div>
 )
 
-export { BigCircles, SmallCircles }
+export { BigCircles, SmallCircles };

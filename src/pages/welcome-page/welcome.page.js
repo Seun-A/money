@@ -1,22 +1,40 @@
-import './welcome.style.scss'
-import { Link } from "react-router-dom";
+import './welcome.style.css'
 
 import { BigCircles } from '../../components/circles/circles.component'
-import { WelcomeLogo } from '../../components/logos/logos.component'
 import Button from '../../components/buttons/buttons.component'
+import WelcomeBack from '../../components/welcome-back/welcome-back.component';
+import Launch from '../../components/launch/launch.component';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const WelcomePage = () => (
-    <div className='welcome'>
+
+class WelcomePage extends React.Component {
+  constructor() {
+    super(); 
+    this.state = { showComponent: true }
+  }
+  
+  componentDidMount(){ 
+    setTimeout(() => {this.setState({ showComponent: false })}, 2500);
+  }
+
+  render() {
+    return (
+      <div id='welcome-page' className='page d-flex flex-column justify-content-between'>
+        {this.state.showComponent ? <Launch /> :  null }
+    
         {/* Background */}
         <BigCircles />
-
-        <Link to="/"><WelcomeLogo /></Link>
+    
+        <WelcomeBack />
         
-        <div className='btn-container'>            
-            <Link to="/signin"><Button type='signin' /></Link>
-            <Link to="/signup"><Button type='signup' /></Link>
+        <div className='btn-container d-flex flex-column align-items-center'>
+          <Link to='/signin'><Button type='signin' /></Link>
+          <Link to='/signup'><Button type='signup' /></Link>
         </div>
-    </div>
-)
+      </div>
+    )
+  }
+}
 
-export default WelcomePage
+export default WelcomePage;

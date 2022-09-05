@@ -1,0 +1,30 @@
+@keyframes zoomOut {
+  0% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#launch {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  z-index: 10;
+
+  animation: zoomOut 2.5s linear;
+
+  .color-logo { width: 100px; }
+
+  .launch-text {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    background-image: linear-gradient(to bottom right, #C432F8, #42A2E7);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Montserrat', sans-serif;
+  }  
+}
