@@ -1,0 +1,34 @@
+form.sign-up-in-form {
+  z-index: 1;
+  height: 60vh;
+  padding-bottom: 60px;
+
+  section {
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  h1 { font-size: 28px; }
+
+  a.forgot {
+    color: #2B47FC;
+    font-family: 'Mitr', sans-serif;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  form.sign-up-in-form {
+    height: 350px;
+    padding-bottom: 20px;
+    font-size: 0.9rem;
+
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+  }
+}

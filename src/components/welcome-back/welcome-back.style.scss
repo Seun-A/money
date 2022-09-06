@@ -1,5 +1,4 @@
 .welcome-back {
-  height: 160px;
   width: 110px;
   z-index: 10;
 
@@ -11,5 +10,11 @@
     letter-spacing: 1px;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 35px;
   }
+}
+
+
+@media (max-width: 400px) {
+  .welcome-back > .welcome-logo-text { margin-top: 10px; }
 }

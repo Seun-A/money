@@ -1,0 +1,62 @@
+@mixin shrinkLabel {
+  font-weight: 500;
+  top: -25px;
+}
+
+.form-input-container {
+  position: relative;
+  font-family: 'Mitr', sans-serif;
+  height: 40px;
+  margin-top: 50px;  
+
+  .form-input {
+    
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+
+    border: none;
+    border-bottom: 1px solid #3A3A3A;
+    transition: border 0.5s;
+    
+    color: #243E14;
+    
+    &:focus-within, &:hover {
+      outline: none;
+      border-bottom: 1px solid #4960F9;
+    }
+
+    &:focus ~ .form-input-label {
+      @include shrinkLabel(); 
+    }
+  }
+  
+  
+
+
+  .form-input-label {
+    position: absolute;
+    top: 7px;
+    
+    color: #B9B9B9;
+    font-weight: normal;
+    
+    pointer-events: none;
+    transition: 300ms ease all;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+  }
+}
+
+
+
+@media (max-width: 400px) { 
+  .form-input-container {
+    height: 35px;
+    margin-top: 30px;  
+
+    .form-input-label { top: 7px; }
+  }  
+}

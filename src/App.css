@@ -1,12 +1,10 @@
 .App {
   width: 100vw;
-
   background: white;
-  color: #3A3A3A;
 
   height: 100%;
   min-height: 100vh;
   overflow: hidden !important;
 }
 
-.page { width: 100vw; height: 100vh; }
+.page { width: 100vw; height: 100vh; overflow: hidden !important; }

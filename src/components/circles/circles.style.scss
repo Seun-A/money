@@ -1,15 +1,24 @@
-.circle { border-radius: 50%; }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 .circles-container {
   position: absolute;
   top: 0;
   left: 0;
-
+  
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   z-index: 0; 
-
+  
+  .circle { 
+    border-radius: 50%;
+    animation: spin 15s infinite linear;
+  }
+  
   >* { position: absolute; }
 }
 
@@ -67,17 +76,32 @@
 /* Media Queries */
 @media (max-width: 400px) {
   .big-circles {
-    .circle-1{
+    .circle-1 {
       width: 755px; height: 677px;
       top: -350px; left: -510px;
     }
-    .circle-2{
+    .circle-2 {
       width: 730px; height: 750px;
       top: -394px; left: -440px;
     }
-    .circle-3{
+    .circle-3 {
       width: 727px; height: 770px;
       top: -499px; left: -366px;
     }
-  }  
+  }
+
+  .small-circles {
+    .circle-1 {
+      width: 300px; height: 315px;
+      top: -145px; left: -110px;
+    }
+    .circle-2 {
+      width: 280px; height: 294px;
+      top: -125px; left: -55px;
+    }
+    .circle-3 {
+      width: 320px; height: 328px;
+      top: -185px; left: -50px;
+    }
+  }
 }

@@ -8,7 +8,7 @@ a { z-index: 1; }
 
   padding: 24px;
   border-radius: 25px;
-  overflow: hidden;
+  overflow: hidden !important;
   cursor: pointer;
 
   .main {
@@ -59,12 +59,12 @@ a { z-index: 1; }
 /* Media Queries */
 @media (max-width: 400px) {
   .btn {
-    width: 270px;
+    width: 250px;
     height: 60px;
   
     padding: 17px;
     border-radius: 20px;
         
-    &.sign-in > .circle { top: -45px; right: -190px; }
+    &.sign-in > .circle { top: -45px; right: -180px; }
   }
 }

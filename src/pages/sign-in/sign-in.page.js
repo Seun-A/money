@@ -1,29 +1,37 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import Button from '../../components/buttons/buttons.component'
 import { SmallCircles } from '../../components/circles/circles.component'
-import { ForgotMessage, Input, InputHeader } from '../../components/input/input.component'
-import { WelcomeLogo } from '../../components/logos/logos.component'
+import Form from "../../components/form/form.component";
+import WelcomeBack from "../../components/welcome-back/welcome-back.component";
 import './sign-in.style.scss'
 
-const SignInPage = () => (
-  <div className='sign-page'>
-    {/* BACKGROUND */}
-    <SmallCircles />
+const SignInPage = () => {
+  const [form, setForm] = useState({ email: '', password: ''});
 
-    <Link to="/"><WelcomeLogo /></Link>
+  const handleChange = event => {
+    const { value, name } = event.target;
+    name === 'email' ? 
+      setForm({ email : value, password: form.password }) :
+      setForm({ email : form.email, password: value })
+  }
+  
+  let history = useNavigate();
 
-    <div className='form'>
-      <InputHeader type='Sign In' />
-      <Input type='email' status='error' />
-      <Input type='password' status='error' />
-      <ForgotMessage />
+  const handleSubmit = event => {
+    event.preventDefault();
+    history('/otp-num');
+  }
+  
+  return (
+    <div className='page sign-in-page d-flex flex-column justify-content-between'>
+      {/* BACKGROUND */}
+      <SmallCircles />
+      <WelcomeBack />
+    
+      <Form handleChange={handleChange} state={form} handleSubmit={handleSubmit} />
     </div>
+  )
+}
 
-      <Link to='/otp-num' className="d-flex justify-content-center">
-        <Button type='signin' />
-      </Link>
-  </div>
-)
-
-export default SignInPage
+export default SignInPage;
