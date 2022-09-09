@@ -1,0 +1,5 @@
+.sign-in-page { padding: 45px 35px 0; }
+
+@media (max-width: 400px) {
+  .sign-in-page { padding: 20px; }
+}

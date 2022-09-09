@@ -1,0 +1,85 @@
+form.sign-up-in-form {
+  width: 100%;
+  max-width: 900px;
+  height: 60vh;
+
+  padding-bottom: 60px;
+  z-index: 1;
+
+  section {
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  h1 { font-size: 28px; }
+
+  a.forgot {
+    color: #2B47FC;
+    font-family: 'Mitr', sans-serif;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+
+
+div.otp-form {
+  width: 100%;
+  h4 {
+    color: #B9B9B9;
+    font-size: 1rem;
+
+    a { color: #2743FD; &:hover { text-decoration: underline; } }
+  }
+
+  .box { min-height: 150px; }
+
+  .number-container {
+    width: 60vw;
+    max-width: 350px;
+    
+    padding: 1vh 4vw;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+
+    .tel { margin-right: 0.5rem; }
+
+    input {
+      width: 7.5rem;
+      border: none;
+      background: none;
+
+      &:focus, &:focus-within { outline: none; }
+    }
+  }
+
+  .btn { margin: 30px auto; }
+
+  .otp-container input {
+    font-size: 1.5rem;
+    text-align: center;
+
+    width: 49px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #B9B9B9;
+    margin: 0 12px;
+
+    &:focus { outline: none; }
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  form.sign-up-in-form {
+    font-size: 0.9rem;
+    height: 350px;
+    padding-bottom: 20px;
+
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+  }
+}

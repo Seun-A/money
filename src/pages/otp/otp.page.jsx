@@ -1,57 +1,69 @@
 import './otp.style.scss'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import undraw from './otp-img.svg'
-import Button from '../../components/buttons/buttons.component'
-import { Link } from 'react-router-dom'
+import { OtpForm } from '../../components/forms/forms.component'
 
 
+const OtpPage = () => {
+  const [form, setForm] = useState({ num: '', numValue: '', sentOTP: false, dis: true });
 
-const OtpPage = ({ variation }) => (
-  <div className='otp-page otp-page-1 d-flex flex-column align-items-center'>
-    <img src={undraw} alt='otp-img' className='otp-img'/>
-    
-    <div className='otp-title'><strong>OTP Verification</strong></div>
+  const handleNumChange = event => setForm( prevForm => {return { ...prevForm, num: event.target.value }});
 
-    {
-      variation === 'otp-num' ? (
-        <>
-          <div className='otp-info m-3 text-center'>We will send a one time password to this mobile number</div>
+  const handleOTPChange = event => {
+    const inputs = document.querySelectorAll(".otp-container input");
 
-          <div className='otp-instruction'>Enter Mobile Number</div>
-          <div className='otp-number-input m-2 bg-dange d-flex justify-content-center'>
-            <div className='code bg-dange d-flex align-items-center'>+234</div>
-            <input 
-            className='bg-warnin'
-              id='phone-number-input'
-              type='tel' 
-              placeholder='800 000 0000' 
-              maxLength={10}
-            />
-          </div>
-          
-          <Link to='/otp-pin' className="d-flex justify-content-center">
-            <Button type='sign-in' label='Get OTP' className='otp-btn'></Button>
-          </Link>
-        </>
-      ) 
-      : variation === 'otp-pin' ? (
-        <>
-          <div className='otp-info m-3 text-center'>Enter the OTP end to <strong>+234 800 000 0000</strong></div>
+    inputs.forEach((input, index) => {
+      if (index !== 0) { input.addEventListener("click", () => inputs[0].focus()) }
 
-          <input className='otp-pin mt-4' type="tel" maxLength="4" placeholder={1234} />
-          <div className='resend mt-4'><strong>
-            <span className='text-secondary'>Didn't receive OTP? </span>
-            <a className='link-primary' href='##'>Resend OTP</a>
-          </strong></div>
-          
-          <Link to='/' className="d-flex justify-content-center">
-            <Button type='sign-in' label='Verify' className='otp-btn'></Button>
-          </Link>
-        </>
-      ) : null
-    }
-  </div>
-)
+      input.addEventListener("keyup", () => {
+        input.style.borderColor = '#2743FD';
+        if (input.value && index !== 3) { inputs[index + 1].focus(); }
+        else { setForm( prevForm => { return { ...prevForm, dis: false }}); }
+      });
+    });
+  }
+  
+
+  const handleNumSubmit = event => {
+    event.preventDefault();
+    setForm( prevForm => { return { 
+      ...prevForm,
+      numValue: `+234 ${form.num.substring(0, 3)} ${form.num.substring(3, 6)} ${form.num.substring(6, 10)}`, 
+      sentOTP: true,
+    }});
+  }
+
+  let history = useNavigate();
+
+  const handleOTPSubmit = event => {
+    event.preventDefault();
+    history('/')
+  }
 
 
+  return (
+    <div className='otp-page otp-page-1 d-flex flex-column align-items-center'>
+      <img src={undraw} alt='otp-img' className='otp-img'/>
 
-export default OtpPage 
+      <h1 className='fw-bold'>OTP Verification</h1>
+        {
+          form.sentOTP ? (
+            <h3 className='mt-3 mb-4 text-center'>Enter the OTP sent to <strong>{form.numValue}</strong></h3>
+          )
+          : <h3 className='mt-3 mb-4 text-center'>We will send a one time password to this mobile number</h3>
+        }
+
+      <OtpForm 
+        state={form}
+        handleChange1={handleNumChange}
+        handleChange2={handleOTPChange}         
+        handleSubmit1={handleNumSubmit}
+        handleSubmit2={handleOTPSubmit}
+      />
+    </div>
+  )
+}
+
+export default OtpPage;

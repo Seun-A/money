@@ -6,49 +6,19 @@
     margin: 7vh 0 7.5vh 0;
   }
 
-  .otp-info { width: 90vw; }
-  .otp-instruction { color: #B9B9B9; }
-  .otp-number-input { 
-    border-bottom: 1px solid black; 
-    // width: 68vw;
-    box-sizing: border-box;
-    // text-align: center !important;
-    padding: 1vh 4vw;
-    .code {
-      margin-right: 0.5rem;
-    }
-    input {
-      border: none;
-      width: 7.5rem;
-    }
-  }
-
-  .btn {
-    position: absolute;
-    bottom: 7vh;
-    
-    .main {
-      display: flex;
-      justify-content: center;
-    }
+  h1 { font-size: 1.5rem; }
+  h3 {
+    font-size: 1.1rem;
+    width: 85vw;
   }
 }
 
-.otp-pin-container {
-  width: 10rem;
-  
-}
-.otp-pin {
-  
-  width: 8rem;
-  border: none;
-  border-bottom: solid 0.1rem black;
-  text-align: center;
-  font-size: 2rem;
-  letter-spacing: 0.6rem;
-  transition: border 0.5s;
-  
-  &:focus {
-    border-bottom: solid 0.1rem #2743FD;
+
+@media (max-width: 400px) {
+  .otp-page {
+    .otp-img { height: 25vh; }
+
+    h1 { font-size: 1.2rem; }
+    h3 { font-size: 0.95rem; }
   }
 }

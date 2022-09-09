@@ -1,4 +1,4 @@
-import './sign-in.style.css';
+import './sign-up.style.css';
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import WelcomeBack from "../../components/welcome-back/welcome-back.component";
 import { LoginForm } from "../../components/forms/forms.component";
 
 
-const SignInPage = () => {
+const SignUnPage = () => {
   const [form, setForm] = useState({ email: '', password: ''});
 
   const handleChange = event => {
@@ -26,13 +26,13 @@ const SignInPage = () => {
   }
   
   return (
-    <div className='page sign-in-page d-flex flex-column justify-content-between'>
+    <div className='page sign-up-page d-flex flex-column justify-content-between'>
       <SmallCircles />
       <WelcomeBack />
     
-      <LoginForm type='sign-in' handleChange={handleChange} state={form} handleSubmit={handleSubmit} />
+      <LoginForm type='sign-up' handleChange={handleChange} state={form} handleSubmit={handleSubmit} />
     </div>
   )
 }
 
-export default SignInPage;
+export default SignUnPage;
