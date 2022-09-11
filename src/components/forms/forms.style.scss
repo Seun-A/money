@@ -1,3 +1,4 @@
+/** SIGN IN/UP FORM **/
 form.sign-up-in-form {
   width: 100%;
   max-width: 900px;
@@ -23,6 +24,7 @@ form.sign-up-in-form {
 
 
 
+/** OTP FORM **/
 div.otp-form {
   width: 100%;
   h4 {
@@ -71,6 +73,74 @@ div.otp-form {
 
 
 
+/** SET UP FORM **/
+form.setup-form {
+  width: 85vw;
+  max-width: 700px;
+  margin: 0 auto;
+  
+  .img-container { height: 250px; position: relative; }
+
+  .img-input {
+    width: 100px;
+    height: 99.45px;
+    cursor: pointer;
+    z-index: 3;
+
+    background: #FFFFFF;
+    overflow: hidden;
+    border: none;
+    border-radius: 36px;
+
+    &:hover { background: #f5f5f5; }
+  }  
+
+  .img-bg {
+    position: absolute;
+    width: 103.6px;
+    height: 103.83px;
+    border-radius: 36px;
+  }
+
+  .img-bg-1 {
+    background: #40CEF2;
+    transform: matrix(0.55, 0.84, -0.84, 0.54, 0, 0);
+    z-index: 2;
+  }
+  .img-bg-2 {
+    background: #B52FF8;
+    transform: matrix(0.87, 0.5, -0.5, 0.87, 0, 0);
+  }
+
+  .form-input-container {
+    .form-input { 
+      color: white;
+      font-weight: 500;
+      border-bottom: 1px solid white;
+    }
+
+    .form-input-label { color: #80E0FF; }
+  }
+
+  .btn-container {
+    padding: 50px 0 20px;
+    
+    .btn {
+      border: 1px solid #FFFFFF;
+      
+      &:hover {
+        color: #2743FD;
+        background: #F5F5F5;
+        border: 1px solid #F5F5F5;
+      }
+    }
+  }
+
+}
+
+
+
+/** Media Queries **/
 @media (max-width: 400px) {
   form.sign-up-in-form {
     font-size: 0.9rem;
@@ -80,6 +150,13 @@ div.otp-form {
     h1 {
       font-size: 1.3rem;
       margin-bottom: 40px;
+    }
+  }
+
+  form.setup-form {
+    .img-container { height: 150px; }
+    .btn-container {
+      padding: 50px 0 20px;
     }
   }
 }

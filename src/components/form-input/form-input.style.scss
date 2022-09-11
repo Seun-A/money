@@ -7,16 +7,17 @@
   position: relative;
   font-family: 'Mitr', sans-serif;
   height: 40px;
-  margin-top: 50px;  
-
+  margin-top: 50px;
+  
   .form-input {
     height: 100%;
     width: 100%;
     padding: 0px;
-
+    
+    background: none;
     outline: none;
-    border-radius: none;
     border: none;
+    border-radius: none;
     border-bottom: 1px solid #3A3A3A;
     transition: border 0.5s;
     

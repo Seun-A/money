@@ -2,7 +2,7 @@ import './otp.style.scss'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import undraw from './otp-img.svg'
+import undraw from '../../assets/otp-img.svg'
 import { OtpForm } from '../../components/forms/forms.component'
 
 
@@ -39,7 +39,7 @@ const OtpPage = () => {
 
   const handleOTPSubmit = event => {
     event.preventDefault();
-    history('/')
+    history('/setup')
   }
 
 

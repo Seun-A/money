@@ -1,7 +1,12 @@
 import './forms.style.scss'
+
 import FormInput from '../form-input/form-input.component';
 import Button from '../buttons/buttons.component';
 
+import tick from '../../assets/tick.svg'
+
+
+/** LOGIN **/
 const LoginForm = ({ state, type, handleChange, handleSubmit }) => (
   <form 
     onSubmit={handleSubmit}
@@ -43,6 +48,7 @@ const LoginForm = ({ state, type, handleChange, handleSubmit }) => (
 
 
 
+/** OTP **/
 const OtpForm = ({ state, handleChange1, handleChange2, handleSubmit1, handleSubmit2 }) => (
   <div className='otp-form d-flex flex-column align-items-center'>
 
@@ -69,7 +75,7 @@ const OtpForm = ({ state, handleChange1, handleChange2, handleSubmit1, handleSub
       <form onChange={handleChange2} onSubmit={handleSubmit2} className='d-flex flex-column align-items-center'>
         <div className='box'>
           <div className='otp-container d-flex mt-3 mb-2'>
-          { [1, 2, 3, 4].map((e, i) => <input key={i} type='tel' maxLength={1} /> ) }
+          { [0, 1, 2, 3].map(e => <input key={e} type='tel' maxLength={1} required /> ) }
           </div>
 
           <h4 className='fw-bold mt-4'>Didn't receive OTP? <a href='##'>Resend OTP</a></h4>
@@ -81,4 +87,50 @@ const OtpForm = ({ state, handleChange1, handleChange2, handleSubmit1, handleSub
   </div>
 )
 
-export { LoginForm, OtpForm };
+
+/** SETUP **/
+const tickImg = <span className='d-flex'>Complete <img src={tick} alt='tick' className='ps-2' /></span> 
+
+const SetUpForm = ({ state, handleChange, handleSubmit, fileSelect, changeToDate, changeToText, readImg }) => (
+  <form className='setup-form' onSubmit={handleSubmit}>
+    <div className='img-container d-flex justify-content-center align-items-center'>
+      <div className='img-input d-flex justify-content-center align-items-center' onClick={fileSelect}>
+        <input type="file" id="choose_file" className='d-none' onChange={readImg} />
+        <img src={state.imgUrl} alt='insert' className='w-100' id='profile-img' />
+      </div>
+      <span className='img-bg img-bg-1' />
+      <span className='img-bg img-bg-2' />
+    </div>
+
+    {
+      [
+        ['username', 'Username', state['username'], 'username'],
+        ['firstname', 'First Name', state['firstname'], 'username'],
+        ['lastname', 'Last Name', state['lastname'], 'username'],
+        ['dob', 'Date Of Birth', state['dob'], 'username']
+      ]
+      .map((e, i) => (
+        <FormInput
+          key={i}
+          name={e[0]}
+          type='text'
+          label={e[1]}
+          value={e[2]}
+          onChange={handleChange}
+          autoComplete={e[3]}
+          required
+
+          onFocus={ e[0] === 'dob' ? changeToDate : null }
+          onBlur={ e[0] === 'dob' ? changeToText : null }
+        />
+      ))
+    }
+
+
+    <div className='btn-container d-flex justify-content-center align-items-center mt-3'>
+      <Button type='light' label={tickImg} center />
+    </div>
+  </form>
+)
+
+export { LoginForm, OtpForm, SetUpForm };
