@@ -1,4 +1,6 @@
-# UI Breakdown with React Js
+# React Js Banking App
+
+![Image](src/assets/money.png)
 
 [UI design by Oshode Similoluwa](https://www.figma.com/file/s0jKMlulu7vx3RVgwGSWIk/Untitled?node-id=0%3A1)
 

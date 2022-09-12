@@ -96,7 +96,7 @@ const SetUpForm = ({ state, handleChange, handleSubmit, fileSelect, changeToDate
     <div className='img-container d-flex justify-content-center align-items-center'>
       <div className='img-input d-flex justify-content-center align-items-center' onClick={fileSelect}>
         <input type="file" id="choose_file" className='d-none' onChange={readImg} />
-        <img src={state.imgUrl} alt='insert' className='w-100' id='profile-img' />
+        <img src={state.profileImg} alt='insert' className='w-100' id='profile-img' />
       </div>
       <span className='img-bg img-bg-1' />
       <span className='img-bg img-bg-2' />
@@ -133,4 +133,30 @@ const SetUpForm = ({ state, handleChange, handleSubmit, fileSelect, changeToDate
   </form>
 )
 
-export { LoginForm, OtpForm, SetUpForm };
+
+/** PROFILE **/
+const ProfileForm = ({ state, setApp }) => (
+  <form className='profile-form'>
+    {
+      [
+        ['username', 'Username', state['username'], 'username'],
+        ['firstname', 'First Name', state['firstname'], 'username'],
+        ['lastname', 'Last Name', state['lastname'], 'username'],
+        ['dob', 'Date Of Birth', state['dob'], 'username']
+      ]
+      .map((e, i) => (
+        <FormInput
+          key={i}
+          name={e[0]}
+          type='text'
+          label={e[1]}
+          value={e[2] ? e[2] : '...'}
+          autoComplete={e[3]}
+          disabled    
+        />
+      ))
+    }
+  </form>
+)
+
+export { LoginForm, OtpForm, SetUpForm, ProfileForm };

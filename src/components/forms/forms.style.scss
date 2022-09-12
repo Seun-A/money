@@ -65,6 +65,7 @@ div.otp-form {
     border: none;
     border-radius: 0px;
     border-bottom: 1px solid #B9B9B9;
+    background: none;
     margin: 0 12px;
 
     &:focus { outline: none; }
@@ -87,12 +88,12 @@ form.setup-form {
     cursor: pointer;
     z-index: 3;
 
-    background: #FFFFFF;
+    background: white;
     overflow: hidden;
     border: none;
     border-radius: 36px;
 
-    &:hover { background: #f5f5f5; }
+    &:hover { background: whitesmoke; }
   }  
 
   .img-bg {
@@ -126,18 +127,38 @@ form.setup-form {
     padding: 50px 0 20px;
     
     .btn {
-      border: 1px solid #FFFFFF;
+      border: 1px solid whitesmoke;
       
       &:hover {
         color: #2743FD;
-        background: #F5F5F5;
-        border: 1px solid #F5F5F5;
+        background: white;
+        border: 1px solid white;
       }
     }
   }
 
 }
 
+
+
+/** PROFILE FORM **/
+.profile-form {
+  padding-top: 5px;
+
+  .form-input-container {
+    margin: 60px 0;
+
+    .form-input { 
+      color: #2743FD;
+      font-weight: 500;
+      border-bottom: 1px solid #DEE1EF;
+
+      &:hover { border-bottom: 1px solid #DEE1EF; }
+    }
+
+    .form-input-label { color: #3A3A3A; }
+  }
+}
 
 
 /** Media Queries **/

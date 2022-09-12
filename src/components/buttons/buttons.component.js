@@ -1,7 +1,7 @@
 import './buttons.style.scss'
 
-const Button = ({ type, label, arrow, center, doubleCircle, dis }) => (
-  <button className={`btn ${type}`} disabled={dis}>
+const Button = ({ type, label, arrow, center, doubleCircle, dis, signOut, handleSignOut }) => (
+  <button className={`btn ${type}`} disabled={dis} onClick={signOut ? handleSignOut : null} >
     { doubleCircle ? <span className='circle-left' /> : null}
     <div className={`main d-flex ${center ? 'justify-content-center' : 'justify-content-between'} align-items-center`}>
       <span className=''>{label}</span>

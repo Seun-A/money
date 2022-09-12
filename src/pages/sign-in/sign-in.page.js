@@ -22,7 +22,7 @@ const SignInPage = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    history('/otp');
+    history('/home');
   }
   
   return (

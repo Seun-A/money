@@ -1,5 +1,5 @@
-import { LaunchLogo } from '../logos/logos.component'
 import './launch.style.scss'
+import { LaunchLogo } from '../logos/logos.component'
 
 const Launch = () => (
   <div id='launch' className='d-flex flex-column justify-content-center align-items-center'>

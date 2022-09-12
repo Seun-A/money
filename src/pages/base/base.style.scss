@@ -1,0 +1,10 @@
+.base-page {
+  height: 100vh;
+  overflow: hidden;
+
+  .base-sub-page {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+  }
+}
