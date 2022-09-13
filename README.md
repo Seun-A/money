@@ -1,6 +1,6 @@
 # React Js Banking App
 
-![Image](src/assets/money.png)
+![Image](src/assets/mockup.png)
 
 [UI design by Oshode Similoluwa](https://www.figma.com/file/s0jKMlulu7vx3RVgwGSWIk/Untitled?node-id=0%3A1)
 

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import './status.style.scss'
+import { Link } from 'react-router-dom';
 
 const Status = ({ state }) => (
   <div className='status-container d-flex'>

@@ -23,21 +23,28 @@
       align-items: center;
       justify-content: center;
       filter: grayscale(1);
+      transition: filter 0.5s;
+
+      &:hover { filter: grayscale(0.5); }
+
+      &::after {
+        content: '';
+        width: 5px;
+        height: 5px;
+        
+        position: absolute;
+        bottom: 10px;
+        
+        border-radius: 50%;
+        background: #2B47FC;
+        filter: opacity(0);
+        transition: filter 0.4s;
+      }
 
       &.active {
         filter: grayscale(0);
 
-        &::after {
-          content: '';
-          width: 5px;
-          height: 5px;
-          
-          position: absolute;
-          bottom: 10px;
-          
-          border-radius: 50%;
-          background: #2B47FC;
-        }
+        &::after { filter: opacity(1); }
       }
     }
   }

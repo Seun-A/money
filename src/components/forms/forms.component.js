@@ -3,7 +3,7 @@ import './forms.style.scss'
 import FormInput from '../form-input/form-input.component';
 import Button from '../buttons/buttons.component';
 
-import tick from '../../assets/tick.svg'
+import tick from '../../assets/icons/tick.svg'
 
 
 /** LOGIN **/
@@ -104,10 +104,10 @@ const SetUpForm = ({ state, handleChange, handleSubmit, fileSelect, changeToDate
 
     {
       [
-        ['username', 'Username', state['username'], 'username'],
-        ['firstname', 'First Name', state['firstname'], 'username'],
-        ['lastname', 'Last Name', state['lastname'], 'username'],
-        ['dob', 'Date Of Birth', state['dob'], 'username']
+        ['username', 'Username', state.username, 'username'],
+        ['firstname', 'First Name', state.firstname, 'username'],
+        ['lastname', 'Last Name', state.lastname, 'username'],
+        ['dob', 'Date Of Birth', state.dob, 'username']
       ]
       .map((e, i) => (
         <FormInput
@@ -139,10 +139,10 @@ const ProfileForm = ({ state, setApp }) => (
   <form className='profile-form'>
     {
       [
-        ['username', 'Username', state['username'], 'username'],
-        ['firstname', 'First Name', state['firstname'], 'username'],
-        ['lastname', 'Last Name', state['lastname'], 'username'],
-        ['dob', 'Date Of Birth', state['dob'], 'username']
+        ['username', 'Username', state.username, 'username'],
+        ['firstname', 'First Name', state.firstname, 'firstname'],
+        ['lastname', 'Last Name', state.lastname, 'lastname'],
+        ['dob', 'Date Of Birth', state.dob, 'dob']
       ]
       .map((e, i) => (
         <FormInput

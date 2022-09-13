@@ -17,12 +17,11 @@ import HomePage from './pages/home/home.page';
 import NotificationsPage from './pages/notifications/notifications.page';
 import ProfilePage from './pages/profile/profile.page';
 
-import cam from './assets/cam.svg'
+import cam from './assets/icons/cam.svg'
 
 
 const App = () => {
   const [app, setApp] = useState({ username: '', firstname: '', lastname: '', dob: '', profileImg: cam });
-
 
   return (
     <div className="App">
@@ -33,13 +32,13 @@ const App = () => {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/otp" element={<OtpPage />} />
           <Route path="/setup" element={<SetupPage state={app} setApp={setApp} />} />
-          <Route path="/home" element={<BasePage state={app} setApp={setApp} />}>
+          <Route path="/home" element={<BasePage />}>
             <Route index element={<HomePage state={app} />} />
-            <Route path='/home/notifications' element={<NotificationsPage />} />
+            <Route path='/home/notifications' element={<NotificationsPage state={app} />} />
             <Route path='/home/profile' element={<ProfilePage state={app} setApp={setApp} />} />
           </Route>
             <Route path='*' element={
-              <div>Can't</div>
+              <div>Can't find the page you're looking for</div>
             } />
         </Routes>
       </BrowserRouter>

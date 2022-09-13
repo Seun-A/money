@@ -1,0 +1,52 @@
+.notification {
+  height: 80px;
+  padding: 10px 5px;
+
+  border-bottom: 1px solid #DEE1EF;
+  transition: background 0.2s;
+  cursor: pointer;
+
+  &:hover { background: #FFFFFF99; }
+
+  .notif-img-container {
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 1;
+
+    img { box-shadow: 0 5px 5px #00000022; }
+  }
+
+  .notif-main {
+    flex-grow: 1;
+
+    .notif-title {
+      color: black;
+      font-weight: 500;
+    }
+
+    .narration {
+      color: #2743FD;
+      font-size: 0.9rem;
+    }
+  }
+
+  .notif-arrow { aspect-ratio: 0.5; }
+}
+
+
+@media (max-width: 400px) {
+  .notification {
+    height: 60px;
+    padding: 10px 0;
+  
+    .notif-img-container {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .notif-main {  
+      .notif-title { font-size: 0.9rem; }
+      .narration { font-size: 0.8rem; }
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import Banner from '../../components/banner/banner.component';
 import './home.style.scss'
+import Banner from '../../components/banner/banner.component';
 
 const HomePage = ({ state }) => (
   <div className='home-sub-page home-page'>

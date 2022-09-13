@@ -1,0 +1,12 @@
+.notifications-page {
+  height: 100%;
+  overflow: scroll;
+  padding-top: 50px;
+  
+  .notif-container {
+    width: 80vw;
+    max-width: 750px;
+
+    .notifications { height: 70vh; }
+  }
+}

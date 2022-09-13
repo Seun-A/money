@@ -1,9 +1,9 @@
 import './footer.style.scss'
 import { Link, useLocation } from 'react-router-dom';
 
-import wallet from '../../assets/wallet.svg'
-import notifications from '../../assets/notifications.svg'
-import profile from '../../assets/profile.svg'
+import wallet from '../../assets/footer-icons/wallet.svg'
+import notifications from '../../assets/footer-icons/notifications.svg'
+import profile from '../../assets/footer-icons/profile.svg'
 
 
 const Footer = () => {
