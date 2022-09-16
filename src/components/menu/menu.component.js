@@ -1,6 +1,8 @@
-import Button from '../buttons/buttons.component';
-import MenuItem from '../menu-item/menu-item.component';
 import './menu.style.scss'
+
+import MenuItem from '../menu-item/menu-item.component';
+import Button from '../buttons/buttons.component';
+
 
 const Menu = ({ handleLogOut, state, show, toggleMenu }) => (
   <div className={`menu-container ${show ? 'show' : null}`}>
@@ -43,8 +45,3 @@ const Menu = ({ handleLogOut, state, show, toggleMenu }) => (
 )
 
 export default Menu;
-
-
-
-
-

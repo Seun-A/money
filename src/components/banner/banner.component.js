@@ -1,12 +1,11 @@
 import './banner.style.scss'
-
 import ham from '../../assets/icons/hamburger.svg'
 
 const greeting = new Date().getHours() < 12 ? 
   "Morning" : new Date().getHours() < 18 ? 
   "Afternoon" : 
-  "Evening";
-
+  "Evening"
+;
 
   
 const Banner = ({ shorter, state, toggleMenu }) => (

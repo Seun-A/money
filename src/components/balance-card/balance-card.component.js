@@ -7,7 +7,7 @@ const BalanceCard = () => (
     <div className='bal-top mx-auto'>
       <div className='d-flex'>
         <h2 className='bal-top-title flex-grow-1 m-0 d-flex align-items-center'>Your Balance is</h2>
-        <div className='bal-btn-contianer d-flex justify-content-center align-items-center px-2'>
+        <div className='d-flex justify-content-center align-items-center px-2'>
           <button className='m-0'>⋯</button>
         </div>
       </div>
@@ -16,7 +16,7 @@ const BalanceCard = () => (
       </h1>
     </div>
 
-    <div className='bal-chart-container d-flex justify-content-center align-items-center mt-3'>
+    <div className='d-flex justify-content-center align-items-center mt-3'>
       <img src={chart} alt='chart' />
     </div>
   </div>

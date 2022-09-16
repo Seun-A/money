@@ -2,18 +2,19 @@
   width: 100%;
   height: 210px;
   
-  background: linear-gradient(168.53deg, #4960F9 -0.74%, #1937FE 123.45%);
-  border-radius: 0 0 60px 60px;
   box-shadow: 0 5px #83E7FE;
+  border-radius: 0 0 60px 60px;
+  background: linear-gradient(168.53deg, #4960F9 -0.74%, #1937FE 123.45%);
   
   &.shorter { height: 137px; }
 
   .hamburger {
     position: relative;
-    left: 30px;
     top: 45px;
-    color: whitesmoke;
+    left: 30px;
+
     cursor: pointer;
+    color: whitesmoke;
     transition: filter 0.2s;
 
     &:hover { filter: brightness(0.9); }
@@ -27,9 +28,9 @@
     position: absolute;
     top: 30px;
     right: 30px;
-    background: white;
-    overflow: hidden;
 
+    overflow: hidden;
+    background: white;
     box-shadow: 0 6px 16px #00000033;
   }
 
