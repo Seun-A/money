@@ -1,0 +1,8 @@
+.menu-item {
+  height: 60px;
+  background: white;
+  color: #2B47FC;
+}
+  
+.menu-item.active { background: #F2F4F8; }
+.menu-item:hover { background: #F2F4F8AA; } 

@@ -37,11 +37,11 @@ a { z-index: 1; }
     .circle-left { left: -80px; transform: scaleX(-1); }
 
     &:hover {
-      background: linear-gradient(to bottom right, #1332ff, #0020f2);
+      background: linear-gradient(to bottom right, #1332FF, #0020F2);
       color: white;
       
       .circle-right, .circle-left {
-        background: linear-gradient(0deg, #00000033, #00000033), linear-gradient(134.4deg, #0720ff -53.64%, #00f2e6 55.89%);
+        background: linear-gradient(0deg, #00000033, #00000033), linear-gradient(134.4deg, #0720FF -53.64%, #00f2e6 55.89%);
       }
     }
 
@@ -71,6 +71,18 @@ a { z-index: 1; }
     &:hover {
       color: white;
       background: #2743FD;
+    }
+
+    &.logout {
+      color: #B23B3B;
+      background: none;
+      border: 1px solid #B23B3B;
+      
+      &:hover {
+        color: white;
+        background: #B23B3B;
+        border: 1px solid #B23B3B;
+      }  
     }
   }
 }

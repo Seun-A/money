@@ -11,7 +11,7 @@ import blue from '../../assets/bg-items/blue.svg'
 
 const ProfilePage = ({ state, setApp }) => {
   let history = useNavigate();
-  const handleSignOut = () => {
+  const handleLogOut = () => {
     // CLEAR LOCAL STORAGE ??
     history('/');
   }
@@ -29,7 +29,7 @@ const ProfilePage = ({ state, setApp }) => {
         <ProfileForm state={state} setApp={setApp} />
 
         <div className='text-center'>
-          <Button type='light' arrow label='Log Out' signOut handleSignOut={handleSignOut} />
+          <Button type='light' label='Log Out' logOut handleLogOut={handleLogOut} />
         </div>
       </div>
     </div>

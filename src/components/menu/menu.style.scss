@@ -1,0 +1,88 @@
+.menu-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 5;
+  background: #0000004D;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+
+  &.show { opacity: 1; visibility: visible; }
+
+
+  .menu {
+    position: fixed;
+    z-index: 6;
+  
+    height: 100vh;
+    width: 80%;
+    max-width: 350px;
+    
+    background: white;
+    box-shadow: 0 0 0vw 100vw #0000004D;
+  
+  
+    .close-menu {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+      transition: color 0.2s;
+      padding: 2px;
+  
+      &:hover { color: #2B47FC; }
+    }
+  
+    .menu-status {
+      height: 20vh;
+      min-height: 100px;
+      
+      .menu-status-container {
+        height: 50px;
+        
+        .menu-img-container {
+          height: 100%;
+          aspect-ratio: 1;
+          margin-left: 30px;
+  
+          img {
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0px 5.52px 15.18px #00000033;
+          }
+        }
+  
+        h3 {
+          font-size: 1.28rem;
+          font-weight: 600;
+        }
+  
+        h4 {
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+    }
+    
+    .menu-items {
+      overflow-y: scroll;
+      padding: 0 0 20vh;
+    }
+    
+    .menu-btn-container {
+      width: 100%;
+      height: 20vh;
+      min-height: 80px;
+  
+      position: absolute;
+      bottom: 0;
+      background: white;
+
+      .btn { width: 230px; }
+    }
+  }
+}
+

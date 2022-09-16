@@ -8,6 +8,17 @@
   
   &.shorter { height: 137px; }
 
+  .hamburger {
+    position: relative;
+    left: 30px;
+    top: 45px;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: filter 0.2s;
+
+    &:hover { filter: brightness(0.9); }
+  }
+
   .banner-img-container {
     width: 60px;
     height: 60px;

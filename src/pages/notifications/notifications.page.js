@@ -17,12 +17,10 @@ const NotificationsPage = ({ state }) => (
               key={e}
               from='User'
               image={state.profileImg}
-              summary='sent you #3000'
-              />
+              summary='sent you ₦3000'
+            />
           ))
         }
-
-        
       </div>
     </div>
   </div>

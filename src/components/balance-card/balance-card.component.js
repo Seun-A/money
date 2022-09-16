@@ -12,7 +12,7 @@ const BalanceCard = () => (
         </div>
       </div>
       <h1 className='bal-top-value m-0 py-2'>
-        #50,000,000
+        ₦50,000,000
       </h1>
     </div>
 
