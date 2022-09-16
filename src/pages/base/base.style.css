@@ -1,4 +1,7 @@
 .base-page {
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
+  position: relative;
+
+  padding-bottom: 87px;
 }
