@@ -42,6 +42,23 @@ a { z-index: 1; }
         background: linear-gradient(0deg, #00000033, #00000033), linear-gradient(134.4deg, #0720ff -53.64%, #00f2e6 55.89%);
       }
     }
+
+    &.checkAcc {
+      font-size: 1.25rem;
+      text-align: left;
+      width: 80%;
+      max-width: 400px;
+      height: 146px;
+      border-radius: 40px;
+      margin: 25px 0;
+
+      .circle-right {
+        width: 144px;
+        height: 144px;
+        right: -60px;
+        top: -45px;
+      }
+    }
   }
 
   &.light {
