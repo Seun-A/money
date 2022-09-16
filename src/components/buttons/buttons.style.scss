@@ -38,6 +38,8 @@ a { z-index: 1; }
 
     &:hover {
       background: linear-gradient(to bottom right, #1332ff, #0020f2);
+      color: white;
+      
       .circle-right, .circle-left {
         background: linear-gradient(0deg, #00000033, #00000033), linear-gradient(134.4deg, #0720ff -53.64%, #00f2e6 55.89%);
       }
