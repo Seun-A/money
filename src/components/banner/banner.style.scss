@@ -5,6 +5,8 @@
   box-shadow: 0 5px #83E7FE;
   border-radius: 0 0 60px 60px;
   background: linear-gradient(168.53deg, #4960F9 -0.74%, #1937FE 123.45%);
+
+  transition: height 0.6s;
   
   &.shorter { height: 137px; }
 
@@ -44,5 +46,12 @@
       max-width: 800px;
       font-size: 1.4rem;
     }
+  }
+
+  .path-title {
+    font-family: 'Mitr';
+    font-size: 1.1rem;
+    font-weight: 5400;
+    margin-top: 21px;
   }
 }

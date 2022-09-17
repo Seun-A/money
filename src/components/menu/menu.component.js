@@ -27,12 +27,11 @@ const Menu = ({ handleLogOut, state, show, toggleMenu }) => (
       <ul className='menu-items'> 
         {
           [
-            { id:'1', to:'#', icon: 'monetization_on', label:'Payments' },
-            { id:'2', to:'#', icon: 'sync_alt', label:'Transactions' },
-            { id:'3', to:'#', icon: 'credit_card', label:'My Cards' },
-            { id:'4', to:'#', icon: 'sell', label:'Promotions' },
-            { id:'5', to:'#', icon: 'savings', label:'Savings' }
-          ].map(({id, ...other}) => <MenuItem key={id} {...other} />)
+            { id:'1', to:'/home', icon: 'account_balance', label:'Home' },
+            { id:'2', to:'/home/transfer', icon: 'sync_alt', label:'Transfer' },
+            { id:'3', to:'/home/cards', icon: 'credit_card', label:'My Cards' },
+            { id:'5', to:'/home/savings', icon: 'savings', label:'Savings / Expenses' }
+          ].map(({id, ...other}) => <MenuItem key={id} {...other} handleClick={toggleMenu} />)
         }
       </ul>
 

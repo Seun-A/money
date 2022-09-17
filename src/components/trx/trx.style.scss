@@ -1,0 +1,36 @@
+.trx {
+  height: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 10px;
+
+  &:hover { background: white; }
+
+  &:nth-child(2) .img { background: radial-gradient(#DB0000 0%, #831010 100%); }
+  &:nth-child(3) .img { background: radial-gradient(#5C5C5C 0%, #141414 100%); }
+
+  .img {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px #0000004A;
+  }
+
+  .trx-title { font-size: 1.2rem; }
+  .trx-time {
+    font-size: 0.85rem;
+    color: #ADADAD;
+  }
+
+  .arr-container { aspect-ratio: 1/2; }
+}
+
+@media (max-width: 400px) {
+  .trx {
+    .trx-title { font-size: 1rem; }
+    .trx-time { font-size: 0.65rem; }
+    .trx-price { font-size: 0.7rem; }
+  }
+}

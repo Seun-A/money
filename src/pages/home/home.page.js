@@ -1,12 +1,10 @@
 import './home.style.css'
 
 import Banner from '../../components/banner/banner.component';
-import BalanceCard from '../../components/balance-card/balance-card.component';
-import Button from '../../components/buttons/buttons.component';
 import Menu from '../../components/menu/menu.component';
 
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 
 
@@ -22,15 +20,21 @@ const HomePage = ({ state }) => {
   
   return (
     <div className='home-page'>
-      <Menu handleLogOut={ handleLogOut } state={ state } show={home.showMenu} toggleMenu={toggleMenu} />
+      <Banner state={state} toggleMenu={toggleMenu} />
 
-      <div className='h-100 d-flex flex-column align-items-center justify-content-center'>
+      <Menu handleLogOut={ handleLogOut } state={ state } show={home.showMenu} toggleMenu={toggleMenu} />
+      <Outlet />
+
+      
+      {/* <HomeSummary state={state} toggleMenu={toggleMenu} /> */}
+
+      {/* <div className='h-100 d-flex flex-column align-items-center justify-content-center'>
         <Banner state={state} toggleMenu={toggleMenu} />
 
         <BalanceCard />
 
         <Button type='dark checkAcc' chevron label='Check your bank accounts'  />
-      </div>
+      </div> */}
     </div>
   )
 }
