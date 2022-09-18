@@ -1,6 +1,6 @@
 import './notification.style.scss'
 
-import arrow from '../../assets/icons/arrow.svg'
+import arrow from '../../assets/icons/arrow-dark.svg'
 
 const Notification = ({ image, from, summary }) => (
   <div className='notification d-flex'>

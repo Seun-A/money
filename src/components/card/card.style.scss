@@ -4,8 +4,8 @@
 
   color: white;
   border: none;
-  background: none;
   margin: 0 auto;
+  background: none;
   
   scroll-snap-align: center;
   perspective: 600px; -webkit-perspective: 600px;
@@ -157,7 +157,7 @@
     }
 
 
-    /* BACKGROUNDS */
+    /* BACKGROUNDS */ // BOTTOM-RIGHT - TOP-RIGHT - BOTTOM-LEFT - TOP LEFT
     &.apple-music-card {
       background: radial-gradient(115% 54% at 103% 83%, #2B47FC 0%, #2B47FC00 100%), radial-gradient(60% 60% at 87% 33%, #E100FF 0%, #E100FF00 100%), radial-gradient(107% 97% at 30% 82%, #40D3F2 0%, #40D3F200 100%), #FFFFFF;
     }

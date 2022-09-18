@@ -1,0 +1,182 @@
+.savings-page {
+  width: 100%;
+  height: calc(100vh - 322px);
+  overflow: scroll;
+
+  position: fixed;
+  margin-top: 25px;
+
+  .back {
+    width: 100%;
+    height: calc(90vh - 297px);
+
+    position: fixed;
+    top: 235px;
+    z-index: 0;
+
+    h1 { height: 5vh; }
+
+    .exp-card-container {
+      width: 80%;
+      max-width: 600px;
+      height: calc(85vh - 317px);
+      min-height: 100px;
+
+      .exp-card-row {
+        width: 50%;
+        height: 100%;
+
+        .exp-card {
+          width: 90%;
+          height: 70%;
+          min-height: 75px;
+
+          position: relative;
+          overflow: hidden;
+          border-radius: 25px;
+
+          &::before {
+            content: '';
+            width: 75%;
+            max-width: 160px;
+            aspect-ratio: 1;
+
+            position: absolute;
+            top: -20%;
+            left: -10%;
+
+            border-radius: 50%;
+            z-index: 1;
+          }
+
+          /* VARIATIONS */
+          &.red {
+            color: #A73131;
+            background: linear-gradient(137.55deg, #FF8787 -24.93%, #C16A6A 117.04%);
+            &::before { background: linear-gradient(136.15deg, rgba(247, 140, 140, 0) -34.41%, #F78C8C 62.64%); }
+          }
+
+          &.yellow {
+            color: #A27430;
+            background: linear-gradient(137.55deg, #FFCF87 -24.93%, #CA9547 117.04%);
+            &::before { background: linear-gradient(136.15deg, rgba(246, 197, 122, 0) -34.41%, #F6C57A 95.22%); }
+          }
+
+          &.blue {
+            color: #298693;
+            background: linear-gradient(137.55deg, #87F0FF -24.93%, #3AA2B1 117.04%);
+            &::before { background: linear-gradient(136.15deg, rgba(115, 220, 235, 0) -34.41%, #73DCEB 95.22%); }
+          }
+
+          &.purple {
+            color: #9137BC;
+            background: linear-gradient(137.55deg, #E09FFF -24.93%, #8A46AB 117.04%);
+            &::before { background: linear-gradient(136.15deg, rgba(216, 143, 255, 0) -34.41%, #D88FFF 95.22%); }
+          }
+
+          span { z-index: 2; }
+        }
+      }
+    }
+  }
+
+  .cover {
+    height: calc(100vh - 322px);
+    padding-top: calc(90vh - 297px);
+    overflow: scroll;
+
+    &::-webkit-scrollbar { display: none; }
+
+    position: relative;
+    z-index: 3;
+
+    .cover-content {
+      height: calc(100vh - 322px);
+
+      border-radius: 60px 60px 0 0;
+      background: linear-gradient(168.53deg, #4960F9 -0.74%, #1937FE 123.45%);
+
+      .handle {
+        width: 15%;
+        max-width: 100px;
+        height: 5px;
+
+        margin: 0 auto;
+        background: white;
+        border-radius: 2.5px;
+      }
+
+      .searchbox {
+        width: 75%;
+        max-width: 500px;
+        margin: 10px auto;
+      }
+
+
+      .trx {
+        color: white;
+        height: 60px;
+
+        &:nth-child(1) .img { background: radial-gradient(#DB0000 0%, #831010 100%); }
+        &:nth-child(2) .img { background: radial-gradient(#5C5C5C 0%, #141414 100%); }
+
+        .trx-time { color: #80E0FF; }
+
+        &:hover { background: #8998FB; }
+      }
+    }
+  }
+}
+
+
+
+
+
+/* LANDSCAPE VIEW */
+@media (max-height: 567px) {
+  .savings-page {
+    height: calc(100vh - 185px);
+    margin-top: 15px;
+
+    .back {
+      height: calc(90vh - 187px);
+      top: 115px;
+
+      h1 { height: 7vh; }
+
+      .exp-card-container {
+        height: calc(85vh - 200px);
+
+        .exp-card-row .exp-card {
+          width: 90%;
+          max-width: 150px;
+          height: 70%;
+          min-height: 30px;
+          padding: 0 15px !important;
+
+          span { font-size: 3vh !important; }
+          &::before { left: -20%; }
+        }
+      }
+    }
+
+    .cover {
+      height: calc(100vh - 186px);
+      padding-top: calc(90vh - 187px);
+  
+      .cover-content {
+        height: calc(100vh - 186px);
+
+        .searchbox { height: 35px; }
+        .handle { height: 5px; }  
+
+        .trx {
+          height: 12vh;
+          font-size: 0.6rem;
+
+          .img, .trx-title, .trx-time { font-size: 0.6rem; }
+        }
+      }
+    }
+  }
+}

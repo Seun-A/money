@@ -12,21 +12,15 @@ const greeting = new Date().getHours() < 12 ?
 const Banner = ({ state, toggleMenu }) => {
   const path = useLocation().pathname.split('/')[2];
 
-  const [isHome, isCards, isTransfer] = [
+  const [isHome, isTransfer, isCards, isSavings] = [
     path === undefined,
-    path === 'cards',
     path === 'transfer',
-    path === 'cards'
+    path === 'cards',
+    path === 'savings',
   ]
 
   return (
     <div className={`banner ${ isTransfer || isCards ? 'shorter' : null}`}>
-
-      {/* {
-        isHome ? 
-        <img className='hamburger px-2 py-1' src={ham} alt='...' onClick={toggleMenu} />
-        : null
-      } */}
       <img className='hamburger px-2 py-1' src={ham} alt='...' onClick={toggleMenu} />
 
       { isHome ?
@@ -44,7 +38,16 @@ const Banner = ({ state, toggleMenu }) => {
               {state.firstname}
             </div>
           </div> 
-        : <div className='path-title text-center text-light'>{path.toUpperCase()}</div>
+        : <div className='path-title text-center text-light'>{!isSavings ? path.toUpperCase() : 'SAVINGS / EXPENSES'}</div>
+      }
+
+      {
+        isSavings ? 
+          <div className='savings-title text-center'>
+            <h4 className='fs-5 fw-normal'>Your Total Savings</h4>
+            <h2 className='text-white fw-bold fs-2'>₦1,208,500</h2>
+          </div>
+        : null
       }
     </div>
   )

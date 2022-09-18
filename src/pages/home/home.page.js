@@ -24,17 +24,6 @@ const HomePage = ({ state }) => {
 
       <Menu handleLogOut={ handleLogOut } state={ state } show={home.showMenu} toggleMenu={toggleMenu} />
       <Outlet />
-
-      
-      {/* <HomeSummary state={state} toggleMenu={toggleMenu} /> */}
-
-      {/* <div className='h-100 d-flex flex-column align-items-center justify-content-center'>
-        <Banner state={state} toggleMenu={toggleMenu} />
-
-        <BalanceCard />
-
-        <Button type='dark checkAcc' chevron label='Check your bank accounts'  />
-      </div> */}
     </div>
   )
 }

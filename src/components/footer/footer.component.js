@@ -10,13 +10,13 @@ const Footer = () => {
   const pathname = useLocation().pathname.split('/')[2]
 
   const [isHome, isNotif, isProfile] = [
-    pathname === undefined,
+    pathname === undefined || pathname === 'cards' || pathname === 'transfer' || pathname === 'savings',
     pathname === 'notifications',
     pathname === 'profile'
   ]
 
   return (
-    <nav className='footer d-flex align-items-center justify-content-center'>
+    <nav id='footer' className='footer d-flex align-items-center justify-content-center'>
       <div className='links-container d-flex flex-row align-items-center justify-content-between'>
         {
           [

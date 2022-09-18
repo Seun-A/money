@@ -6,7 +6,7 @@ import Notification from '../../components/notification/notification.component';
 const NotificationsPage = ({ state }) => (
   <div className='home-sub-page notifications-page d-flex justify-content-center'>
     <div className='notif-container d-flex flex-column'>
-      <SearchBox />
+      <SearchBox type='light' />
 
       <h1 className='fw-bold text-center mt-4 mb-3'>Notifications</h1>
 

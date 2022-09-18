@@ -20,6 +20,7 @@ import ProfilePage from './pages/profile/profile.page';
 import cam from './assets/icons/cam.svg'
 import HomeSummary from './pages/home/summary/summary.page';
 import HomeCards from './pages/home/cards/cards.page';
+import HomeSavings from './pages/home/savings/savings.page';
 
 
 const App = () => {
@@ -29,27 +30,28 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
+          {/* LOGIN */}
           <Route index element={<WelcomePage />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/otp" element={<OtpPage />} />
           <Route path="/setup" element={<SetupPage state={app} setApp={setApp} />} />
+          
+          {/* MAIN */}
           <Route path="/home" element={<BasePage />}>
+            {/* HOME */}
             <Route element={<HomePage state={app} />}>
-              <Route index element={<HomeSummary state={app} />} />
-              <Route path='/home/cards' element={<HomeCards state={app} />} />
-
-              
-              <Route path='*' element={
-                <div>Can't find the page you're looking for</div>
-              } />
+              <Route index element={<HomeSummary />} />
+              <Route path='/home/cards' element={<HomeCards />} />
+              <Route path='/home/savings' element={<HomeSavings />} />
+              <Route path='*' element={ <div className='text-center my-5 py-5 fs-1 fw-bold'>Page in progress</div> } />
             </Route>
+
+            {/* OTHER PAGES */}
             <Route path='/home/notifications' element={<NotificationsPage state={app} />} />
             <Route path='/home/profile' element={<ProfilePage state={app} setApp={setApp} />} />
           </Route>
-            <Route path='*' element={
-              <div>Can't find the page you're looking for</div>
-            } />
+            <Route path='*' element={ <div>Can't find the page you're looking for</div> } />
         </Routes>
       </BrowserRouter>
     </div>

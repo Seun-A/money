@@ -21,6 +21,9 @@
     
     padding: 0 30px;
     margin: 0 auto;
+
+    .trx:nth-child(2) .img { background: radial-gradient(#DB0000 0%, #831010 100%); }
+    .trx:nth-child(3) .img { background: radial-gradient(#5C5C5C 0%, #141414 100%); }
   }
 }
 
@@ -34,6 +37,5 @@
       padding: 20px 60px 0;
       margin: -50px 0 15px;
     }
-
   }
 }

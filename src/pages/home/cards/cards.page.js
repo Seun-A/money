@@ -3,6 +3,7 @@ import './cards.style.scss'
 import Card from '../../../components/card/card.component';
 import Transaction from '../../../components/trx/trx.component';
 
+
 const HomeCards = () => (
   <div className='cards'>
     <div className='cards-container'>
@@ -21,8 +22,8 @@ const HomeCards = () => (
     <div className='recent-transactions'>
       <h1 className='fw-bold'>Recent Transactions</h1>
 
-      <Transaction label='N' name='Netflix' price='19,000' time='15 Jun 2020 at 8:55AM' />
-      <Transaction label='' name='Apple TV' price='19,000' time='15 Jun 2020 at 8:55AM' />
+      <Transaction label='N' name='Netflix' price='19,000' time='15 Jun 2020, 8:55AM' />
+      <Transaction label='' name='Apple TV' price='19,000' time='15 Jun 2020, 8:55AM' />
     </div>
   </div>
 )
