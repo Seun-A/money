@@ -1,0 +1,44 @@
+.keypad {
+  width: 75%;
+  min-width: 200px;
+  max-width: 400px;
+  margin: 20px auto;
+  
+  .btn-container {
+    width: 33%;
+    aspect-ratio: 4/3;
+    
+    button {
+      width: 90%;
+      aspect-ratio: 1.4;
+      
+      background: #D7DCFFAA;
+      border: none;
+      border-radius: 17px;
+      margin: 0 auto;
+      transition: background 0.5s;
+      
+      color: #2743FD;
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-family: 'Mitr';
+
+      &:hover { background: #D7DCFF; }
+      
+      &.del {
+        background: #A20021DD;
+        color: white;
+        
+        &:hover { background: #A20021; }
+        span { font-size: 2rem; }
+      }
+      &.send {
+        background: #4960F8EE;
+        color: white;
+        
+        &:hover { background: #4960F8; }
+        span { font-size: 2rem; }
+      }
+    }
+  }
+}

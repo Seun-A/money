@@ -1,0 +1,45 @@
+.transfer {
+  color: #2743FD;
+
+  .transfer-container {
+    width: 60%;
+    max-width: 500px;
+    margin: 20px auto;
+
+    h2 { font-weight: 400; }
+
+    .input-container {
+      border-bottom: 1px solid #DEE1EF;
+      height: 60px; 
+
+      .input-currency { font-weight: 700; }
+
+      .input-value {
+        font-weight: 700;
+        color: #B6BFFF;
+
+        &.filled { color: #2743FD; }
+      }
+    }
+
+    h5 { font-weight: 400; }
+
+    .recipient {
+      .rec-img-container {
+        width: 35px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        box-shadow: 0 8px 22px #00000033;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: white;
+        }
+      }
+
+      .rec-name { color: #3A3A3A; font-weight: 400; }
+    }
+  }
+}

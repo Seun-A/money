@@ -1,7 +1,7 @@
 import BalanceCard from '../../../components/balance-card/balance-card.component';
 import Button from '../../../components/buttons/buttons.component';
 
-const HomeSummary = () => (
+const Summary = () => (
   <div className='summary h-100 d-flex flex-column align-items-center justify-content-center'>
     <BalanceCard />
 
@@ -9,4 +9,4 @@ const HomeSummary = () => (
   </div>
 )
 
-export default HomeSummary;
+export default Summary;

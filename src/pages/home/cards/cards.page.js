@@ -4,7 +4,7 @@ import Card from '../../../components/card/card.component';
 import Transaction from '../../../components/trx/trx.component';
 
 
-const HomeCards = () => (
+const Cards = () => (
   <div className='cards'>
     <div className='cards-container'>
       {
@@ -28,4 +28,4 @@ const HomeCards = () => (
   </div>
 )
 
-export default HomeCards;
+export default Cards;

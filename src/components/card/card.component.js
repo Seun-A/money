@@ -37,7 +37,7 @@ const Card = ({ colorType, label }) => (
         </div>
         
         <p className='card-message'>
-          This card was isseud under the license of MasterCard Inc. in Purchase, New York. <br />
+          This card was issued under the license of MasterCard Inc. in Purchase, New York. <br />
           If found, please return to the nearest commercial bank.
         </p>
       </div>
