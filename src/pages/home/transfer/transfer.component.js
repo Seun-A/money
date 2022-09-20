@@ -2,11 +2,12 @@ import './transfer.style.scss'
 
 import { useState } from 'react';
 import Warning from '../../../components/warning/warning.component';
+import Success from '../../../components/success/success.component';
 import Keypad from '../../../components/keypad/keypad.component';
 
 
 const Transfer = () => {
-  const [amt, setAmt] = useState({ filled: false,  amount: '', warning: false });
+  const [amt, setAmt] = useState({ filled: false,  amount: '', warning: false, sent: false });
   
   const handleClick = e => {
     if (amt.amount.length < 5) {
@@ -24,12 +25,21 @@ const Transfer = () => {
   const handleWarning = () => setAmt( prev => { return { ...prev, warning: !amt.warning }});
 
   const handleSend = () => {
-    console.log('send')
+    if (amt.amount === '') {
+      
+      console.log('invalid')
+    } else {
+      setAmt( prev => { return { ...prev, sent: true }});
+    }
   }
+
   
   return (
     <div className='transfer'>
       <Warning visibility={amt.warning} handleWarning={handleWarning} />
+
+      <Success sent={amt.sent} value={amt.amount}  />
+
 
       <div className='transfer-container py-3'>
         <h2 className='text-center'>Enter Amount</h2>
