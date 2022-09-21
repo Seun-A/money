@@ -1,5 +1,3 @@
-import './home.style.css'
-
 import Banner from '../../components/banner/banner.component';
 import Menu from '../../components/menu/menu.component';
 

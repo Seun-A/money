@@ -1,14 +1,17 @@
 import './transfer.style.scss'
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Warning from '../../../components/warning/warning.component';
 import Success from '../../../components/success/success.component';
 import Keypad from '../../../components/keypad/keypad.component';
 
 
 const Transfer = () => {
-  const [amt, setAmt] = useState({ filled: false,  amount: '', warning: false, sent: false });
-  
+  const [amt, setAmt] = useState({ filled: false, amount: '', warning: false, sent: false });
+  let history = useNavigate();
+
   const handleClick = e => {
     if (amt.amount.length < 5) {
       if (e.target.id === '0' && amt.amount === '') { return }
@@ -25,22 +28,15 @@ const Transfer = () => {
   const handleWarning = () => setAmt( prev => { return { ...prev, warning: !amt.warning }});
 
   const handleSend = () => {
-    if (amt.amount === '') {
-      
-      console.log('invalid')
-    } else {
-      setAmt( prev => { return { ...prev, sent: true }});
-    }
+    if (amt.amount !== '') { setAmt( prev => { return { ...prev, sent: true }}); }
   }
+
+  const handleAnother = () => setAmt( prev => { return { ...prev, amount:'', filled: false, sent: false }});
+  const handleDone = () => history('/home');
 
   
   return (
     <div className='transfer'>
-      <Warning visibility={amt.warning} handleWarning={handleWarning} />
-
-      <Success sent={amt.sent} value={amt.amount}  />
-
-
       <div className='transfer-container py-3'>
         <h2 className='text-center'>Enter Amount</h2>
 
@@ -62,6 +58,9 @@ const Transfer = () => {
       </div>
 
       <Keypad handleClick={handleClick} handleBackspace={handleBackspace} handleSend={handleSend} />
+      <Warning visibility={amt.warning} handleWarning={handleWarning} />
+
+      <Success sent={amt.sent} value={amt.amount} handleAnother={handleAnother} handleDone={handleDone} />
     </div>
   )
 }
