@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import cam from './assets/icons/cam.svg'
+import defImg from './assets/icons/defImg.svg'
 
 // ONBOARDING
 import WelcomePage from './pages/welcome/welcome.page';
@@ -29,7 +30,7 @@ import Transfer from './pages/home/transfer/transfer.component';
 
 
 const App = () => {
-  const [app, setApp] = useState({ username: '', firstname: '', lastname: '', dob: '', profileImg: cam });
+  const [app, setApp] = useState({ username: '', firstname: '', lastname: '', dob: '', profileImg: cam, defImg: defImg });
 
   return (
     <div className="App">
@@ -47,9 +48,9 @@ const App = () => {
             {/* HOME */}
             <Route element={<HomePage state={app} />}>
               <Route index element={<Summary />} />
-              <Route path='/home/cards' element={<Cards />} />
+              <Route path='/home/cards' element={<Cards state={app} />} />
               <Route path='/home/savings' element={<Savings />} />
-              <Route path='/home/transfer' element={<Transfer />} />
+              <Route path='/home/transfer' element={<Transfer defImg={app.defImg} />} />
               <Route path='*' element={
                 <div className='text-center my-5 py-5 px-2 fs-2 fw-bold'>
                   Can't find the page you're looking for...
@@ -58,7 +59,7 @@ const App = () => {
             </Route>
 
             {/* OTHER MAIN PAGES */}
-            <Route path='/home/notifications' element={<NotificationsPage state={app} />} />
+            <Route path='/home/notifications' element={<NotificationsPage image={app.defImg} />} />
             <Route path='/home/profile' element={<ProfilePage state={app} setApp={setApp} />} />
           </Route>
             <Route path='*' element={ <div>Can't find the page you're looking for</div> } />

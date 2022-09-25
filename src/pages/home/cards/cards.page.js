@@ -4,7 +4,7 @@ import Card from '../../../components/card/card.component';
 import Transaction from '../../../components/trx/trx.component';
 
 
-const Cards = () => (
+const Cards = ({ state }) => (
   <div className='cards'>
     <div className='cards-container'>
       {
@@ -15,7 +15,7 @@ const Cards = () => (
           {id:'4', label:' tv', colorType:'apple-tv-card'},
           {id:'5', label:'amazon', colorType:'amazon-card'},
           {id:'6', label:'spectranet', colorType:'spectranet-card'},
-        ].map(({ id, ...others }) => <Card key={id} {...others} />)
+        ].map(({ id, ...others }) => <Card key={id} {...others} state={state} />)
       }
     </div>
 

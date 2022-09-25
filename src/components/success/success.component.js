@@ -4,7 +4,7 @@ import check from '../../assets/icons/check.svg'
 import Button from '../buttons/buttons.component';
 
 
-const Success = ({ sent, value, handleAnother, handleDone }) => (
+const Success = ({ sent, value, handleAnother, handleDone, defImg }) => (
   <div className={`success-bg ${sent ? 'visible' : null }`}>
     <div className='success py-3 h-100 d-flex flex-column align-items-center justify-content-between'>
       <div className='d-flex flex-column align-items-center'>
@@ -17,7 +17,7 @@ const Success = ({ sent, value, handleAnother, handleDone }) => (
         </span>
       </div>
 
-      <img alt='' className='rec-img my-5' />
+      <img alt='' className='rec-img my-5' src={defImg} />
 
       <div className='success-bottom d-flex flex-column align-items-center'>
           <Button type='dark' doubleCircle center label='New Transaction' handleAnother={handleAnother} />

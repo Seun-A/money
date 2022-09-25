@@ -8,7 +8,7 @@ import Success from '../../../components/success/success.component';
 import Keypad from '../../../components/keypad/keypad.component';
 
 
-const Transfer = () => {
+const Transfer = ({ defImg }) => {
   const [amt, setAmt] = useState({ filled: false, amount: '', warning: false, sent: false });
   let history = useNavigate();
 
@@ -51,16 +51,16 @@ const Transfer = () => {
 
         <div className='recipient d-flex justify-content-center align-items-center'>
           <span className='rec-img-container me-2'>
-            <img alt='' />
+            <img alt='' src={defImg} />
           </span>
-          <span className='rec-name'>K Money</span>
+          <span className='rec-name'>Friend</span>
         </div>
       </div>
 
       <Keypad handleClick={handleClick} handleBackspace={handleBackspace} handleSend={handleSend} />
       <Warning visibility={amt.warning} handleWarning={handleWarning} />
 
-      <Success sent={amt.sent} value={amt.amount} handleAnother={handleAnother} handleDone={handleDone} />
+      <Success defImg={defImg} sent={amt.sent} value={amt.amount} handleAnother={handleAnother} handleDone={handleDone} />
     </div>
   )
 }

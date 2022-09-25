@@ -3,7 +3,7 @@ import './notifications.style.scss'
 import SearchBox from '../../components/searchbox/searchbox.component';
 import Notification from '../../components/notification/notification.component';
 
-const NotificationsPage = ({ state }) => (
+const NotificationsPage = ({ image }) => (
   <div className='home-sub-page notifications-page d-flex justify-content-center'>
     <div className='notif-container d-flex flex-column'>
       <SearchBox type='light' />
@@ -16,7 +16,7 @@ const NotificationsPage = ({ state }) => (
             <Notification
               key={e}
               from='User'
-              image={state.profileImg}
+              image={image}
               summary='sent you ₦3000'
             />
           ))
